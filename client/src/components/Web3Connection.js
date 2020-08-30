@@ -10,6 +10,7 @@ import faucetConfig from './FaucetConfig';
 // Connects web3 to the local provider
 const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');
 
+// Web3Connection class component
 class Web3Connection extends React.Component {
 
     async web3FaucetConnection() {
