@@ -109,7 +109,9 @@ const faucetConfig = {
         }
     ],
 
+    // Faucet.sol Address
     faucetAddress: '0xE4304d24F352349CC4dA0ecDEa7FFa1924959B93'
 }
 
+// Exports the fauceConfig object
 module.exports = faucetConfig;
