@@ -1,26 +1,23 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+
 
 body {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* min-height: 100vh; */
     background: #0c0c0c;
 }
 
 
 a {
     position: relative;
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
+    padding-top: 50px;
+    padding-left: 15px;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     width: 200px; 
+    height: 75px;
     overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 a span {
