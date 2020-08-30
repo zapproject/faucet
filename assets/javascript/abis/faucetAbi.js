@@ -1,5 +1,3 @@
-console.log("HERE")
-
 const faucetAbi = [
 	{
 		"constant": false,
