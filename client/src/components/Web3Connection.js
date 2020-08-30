@@ -30,7 +30,7 @@ class Web3Connection extends React.Component {
         // OnClick this function will deposit 1000 ZAP to the users MetaMask account
         // 1 ETH = 1000 ZAP
         // This transaction will cost the user 1 ETH for 1000 ZAP
-        faucetContract.methods.testZap()
+        faucetContract.methods.buyZap()
 
             .send({
 
@@ -54,7 +54,7 @@ class Web3Connection extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.testZap}>Buy Zap</button>
+                <button onClick={this.web3FaucetConnection}>Get Zap</button>
             </div>
         )
     }
