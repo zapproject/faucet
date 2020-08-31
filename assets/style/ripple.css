@@ -1,0 +1,12 @@
+body {
+    background-color:grey;
+    margin-left:0px;
+    margin-right:0px;
+  }
+  
+  .image {
+    width:100%;
+    height:662px;
+    background-image:url('../images/stock-image.jpg');
+    background-position:center;
+  }
