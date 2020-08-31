@@ -16,6 +16,11 @@ const getOneZap = async () => {
 
 
 const showReceipt = (receipt) => {
+    $("#tnx-hash").append("TNX: ", receipt.transactionHash)
+    $("#from-address").append("From: ", receipt.from)
+    $("#to-address").append("To: ", receipt.to)
+    $("#zap-amount").append("Amount: ", receipt.events.BUYZAP.returnValues._amount)
+
     console.log(receipt);
     console.log("===================================");
     console.log("===================================");
@@ -25,6 +30,7 @@ const showReceipt = (receipt) => {
     console.log("Rate: ", receipt.events.BUYZAP.returnValues._rate);
     console.log("===================================");
     console.log("===================================");
+
 }
 
 // const checkLatestFaucetDraw = async () => {

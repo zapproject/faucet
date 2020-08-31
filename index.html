@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style/index.css">
     <link rel="stylesheet" href="./assets/style/liquid_button.css">
     <title>Zap Faucet</title>
   </head>
@@ -16,13 +17,36 @@
         <h3>Check console for receipt and event</h3>
 
   
-        <h1>Zap Faucet</h1>
-        <!-- <button class="liquid btn btn-primary" onclick="getOneZap()">Click for one Zap</button> -->
+        <h1 >Zap Faucet</h1>
+        <div class="main">
+          <div class="buttons">
+            <a class="get-zap-button get-ten" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
 
-        <a onclick="getOneZap()">
-          <span>Get One Zap</span>
-          <div class="liquid"></div>
-        </a>
+            <a class="get-zap-button get-hundred" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
+
+            <a class="get-zap-button get-thousand" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
+          </div>
+          <div class="receipt">
+            <div class="card text-white bg-dark mb-3">
+              <!-- <div class="card-header">Receipt:</div> -->
+              <div class="card-body">
+                <p id="tnx-hash" class="card-text"></p>
+                <p id="from-address" class="card-text"></p>
+                <p id="to-address" class="card-text"></p>
+                <p id="zap-amount" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
         
       </div>
       

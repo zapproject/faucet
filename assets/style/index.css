@@ -1,0 +1,22 @@
+body {
+    background: #0c0c0c;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    width: 100%;
+}
+
+.receipt {
+    width: 100%;
+}
+
+.receipt * {
+    background-color: #0c0c0c;
+    border: none;
+}
