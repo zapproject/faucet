@@ -3,6 +3,38 @@ body {
     background: #fff;
 }
 
+.topbar {
+    border-bottom: solid 4px #0078FE;
+}
+
+/* Zap topbar logo*/
+img {
+    width:180px;
+
+}
+
+/* Zap kovan faucet h5 */
+h5 {
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+nav a {
+    padding-right: 14px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;    
+}
+
+
+nav a:hover {
+    text-decoration: none;
+    color:#0078FE;
+}
+
+
 .main {
     display: flex;
     justify-content: space-between;
@@ -21,3 +53,4 @@ body {
     /* background-color: #0c0c0c; */
     border: none;
 }
+
