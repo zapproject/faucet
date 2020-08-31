@@ -1,0 +1,92 @@
+.get-zap-button {
+    position: relative;
+    padding-top: 50px;
+    padding-left: 15px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px; 
+    height: 75px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px 0;
+}
+
+.get-zap-button span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 8px;
+}
+
+.get-zap-button .liquid {
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+}
+
+.get-zap-button:hover .liquid {
+    top: -120px;
+
+}
+.get-zap-button .liquid:before,
+.get-zap-button .liquid:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.get-ten .liquid:before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+}
+
+.get-ten .liquid:after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 10s linear infinite;
+}
+.get-hundred .liquid:before {
+    border-radius: 55%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 6s linear infinite;
+}
+
+.get-hundred .liquid:after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 15s linear infinite;
+}
+.get-thousand .liquid:before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 9s linear infinite;
+}
+
+.get-thousand .liquid:after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+

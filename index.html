@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="stylesheet" href="./assets/style/liquid_button.css">
+    <link rel="stylesheet" href="./assets/style/wavebackground.css">
+    <title>Zap Faucet</title>
+  </head>
+  <body>
+    <!-- <div class="container">
+        <h1>Use VC CODE LIVE SERVER EXTENSION TO VIEW BUTTON ACTION</h1>
+        <h3>Check console for receipt and event</h3> -->
+        
+        <section>
+          <div class="container">
+            <div class="main">
+              <div class="buttons">
+                <a class="get-zap-button get-ten" onclick="getOneZap()">
+                  <span>Get One Zap</span>
+                  <div class="liquid"></div>
+                </a>
+
+                <a class="get-zap-button get-hundred" onclick="getOneZap()">
+                  <span>Get One Zap</span>
+                  <div class="liquid"></div>
+                </a>
+
+                <a class="get-zap-button get-thousand" onclick="getOneZap()">
+                  <span>Get One Zap</span>
+                  <div class="liquid"></div>
+                </a>
+              </div>
+              <div class="receipt">
+                <div class="card text-black mb-3">
+                  <div class="card-body">
+                    <p id="tnx-hash" class="card-text"></p>
+                    <p id="from-address" class="card-text"></p>
+                    <p id="to-address" class="card-text"></p>
+                    <p id="zap-amount" class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave4"></div>
+        </section>
+  
+        <!-- <h1 >Zap Faucet</h1>
+        <div class="main">
+          <div class="buttons">
+            <a class="get-zap-button get-ten" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
+
+            <a class="get-zap-button get-hundred" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
+
+            <a class="get-zap-button get-thousand" onclick="getOneZap()">
+              <span>Get One Zap</span>
+              <div class="liquid"></div>
+            </a>
+          </div>
+          <div class="receipt">
+            <div class="card text-white bg-dark mb-3">
+              <div class="card-body">
+                <p id="tnx-hash" class="card-text"></p>
+                <p id="from-address" class="card-text"></p>
+                <p id="to-address" class="card-text"></p>
+                <p id="zap-amount" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+      <!-- </div> -->
+      
+        
+        
+        <!-- card -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="assets/javascript/web3-provider.js"></script>
+    <script src="assets/javascript/abis/faucetAbi.js"></script>
+    <script src="assets/javascript/getOneZap.js"></script>
+
+  </body>
+</html>
