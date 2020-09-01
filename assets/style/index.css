@@ -1,9 +1,19 @@
 body {
-    /* background: #0c0c0c; */
-    background: #fff;
+    background-color:white;
+    overflow: hidden;
+
 }
 
+.container-fluid {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/stock-image.jpg') center center;
+    background-size: cover;
+}
+  
 .topbar {
+    background-color: whitesmoke !important;
     border-bottom: solid 4px #0078FE;
 }
 
@@ -14,11 +24,11 @@ img {
 }
 
 /* Zap kovan faucet h5 */
-h5 {
+h4 {
     margin:auto;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    
+
 }
 
 nav a {
@@ -34,15 +44,31 @@ nav a:hover {
     color:#0078FE;
 }
 
+h5 {
+    color:slate;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;    
+   
+}
+
+p {
+    color:whitesmoke;
+}
+
+#address {
+    color:#0078FE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;    
+}
+
+button {
+    display:block;
+}
 
 .main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.buttons {
-    width: 100%;
 }
 
 .receipt {

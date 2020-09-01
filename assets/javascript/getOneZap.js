@@ -2,15 +2,19 @@
 
 const getOneZap = async () => {
     let accounts = await web3.eth.getAccounts();
-    let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
-    faucetContract.methods
-        .buyZap()
-        .send({ from: accounts[0], value: 1000000000000000 })
-        .then((receipt) => showReceipt(receipt))
-        .catch(function (error) {
-            console.log(error);
-        });
+    // let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
+    // faucetContract.methods
+    //     .buyZap()
+    //     .send({ from: accounts[0], value: 1000000000000000 })
+    //     .then((receipt) => showReceipt(receipt))
+    //     .catch(function (error) {
+    //         console.log(error);
+    //     });
+
+    console.log(accounts)
 };
+
+getOneZap()
 
 
 // let networkType = await web3.eth.net.getNetworkType();

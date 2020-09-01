@@ -1,3 +1,5 @@
 $(document).ready(function () {
-    $('.image').ripples('show');
+    $('.container-fluid').ripples({
+        resolution:400
+    });
 });
