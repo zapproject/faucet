@@ -6,12 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <!-- index.css -->
   <link rel="stylesheet" href="./assets/style/index.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <!-- ripples.css -->
   <link rel='stylesheet' href='./assets//style/ripple.css' />
@@ -20,48 +21,6 @@
 </head>
 
 <body>
-  <!-- <div class="container">
-        <h1>Use VC CODE LIVE SERVER EXTENSION TO VIEW BUTTON ACTION</h1>
-        <h3>Check console for receipt and event</h3> -->
-
-  <!--<section>
-    <div class="container">
-            <div class="main">
-              <div class="buttons">
-                <a class="get-zap-button get-ten" onclick="getOneZap()">
-                  <span>Get One Zap</span>
-                  <div class="liquid"></div>
-                </a>
-
-                <a class="get-zap-button get-hundred" onclick="getOneZap()">
-                  <span>Get One Zap</span>
-                  <div class="liquid"></div>
-                </a>
-
-                <a class="get-zap-button get-thousand" onclick="getOneZap()">
-                  <span>Get One Zap</span>
-                  <div class="liquid"></div>
-                </a>
-              </div>
-              <div class="receipt">
-                <div class="card text-black mb-3">
-                  <div class="card-body">
-                    <p id="tnx-hash" class="card-text"></p>
-                    <p id="from-address" class="card-text"></p>
-                    <p id="to-address" class="card-text"></p>
-                    <p id="zap-amount" class="card-text"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
-  </section>
--->
 
   <nav class="navbar navbar-light bg-light justify-content-between topbar">
     <a href='https://zap.org/'>
@@ -92,18 +51,22 @@
       </p>
 
       <h5>Kovan Ether Faucet Link</h5>
-      <a href='https://faucet.kovan.network/' target='_'>
+      <a href='https://faucet.kovan.network/' target='_blank'>
         <p>https://faucet.kovan.network/</p>
       </a>
 
       <h5>Receive 1 Zap</h5>
+      <button type="button" class="btn btn-primary" id='get-zap'>Get Zap</button>
     </div>
 
-    <button type="button" class="btn btn-primary" id='get-zap'>Get Zap</button>
+    <div class='container hide'>
+      <h5 class='tx-h5'>Test Zap sent to: <span id='to'></span></h5>
+      <h5 class='tx-h5'>Received test Zap from: <span id='from'></span></h5>
+      <h5 class='tx-h5'>Transaction hash: <a href='' id='tx-href'><span id='tx-hash'></span></h5>
+    </div>
+
   </div>
   </div>
-
-
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

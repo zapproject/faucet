@@ -1,47 +1,33 @@
 $(document).ready(() => {
 
-    const getOneZap = async () => {
+    $('.hide').hide();
+
+    $('#get-zap').click(async () => {
 
         let accounts = await web3.eth.getAccounts();
         let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
         faucetContract.methods
             .buyZap()
             .send({ from: accounts[0], value: 1000000000000000 })
-            .then((receipt) => showReceipt(receipt))
+            // .then((receipt) => showReceipt(receipt)
+            .then((res) => {
+                console.log(res.transactionHash)
+
+                $('#to').append(res.from);
+                $('#from').append(res.to);
+                $('#tx-hash').append(res.transactionHash)
+
+                $('#tx-href').attr('href',
+                    'https://kovan.etherscan.io/tx/' + res.transactionHash);
+
+                $('.hide').show();
+            })
+
             .catch(function (error) {
                 console.log(error);
             });
-    };
+    })
 
-    const showReceipt = (receipt) => {
-        $("#tnx-hash").append("TNX: ", receipt.transactionHash)
-        $("#from-address").append("From: ", receipt.from)
-        $("#to-address").append("To: ", receipt.to)
-        $("#zap-amount").append("Amount: ", receipt.events.BUYZAP.returnValues._amount)
-
-        console.log(receipt);
-        console.log("===================================");
-        console.log("===================================");
-        console.log("BUYZAP EVENT");
-        console.log("Buyer: ", receipt.events.BUYZAP.returnValues._buyer);
-        console.log("Amount: ", receipt.events.BUYZAP.returnValues._amount);
-        console.log("Rate: ", receipt.events.BUYZAP.returnValues._rate);
-        console.log("===================================");
-        console.log("===================================");
-
-    }
-
-    // const checkLatestFaucetDraw = async () => {
-    //     let accounts = await web3.eth.getAccounts();
-    //     console.log(accounts[0]);
-    //     web3.eth
-    //         .getPastLogs({
-    //             address: accounts[0],
-    //             // fromBlock: "latest"
-    //         })
-    //         .then((response) => console.log(response));
-    //     // console.log(latest)
-    // };
 
 })
 
