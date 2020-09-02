@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -46,7 +46,7 @@
 
       <!-- Zap Token Address Div -->
       <div>
-        <h5>Zap Token Contract Address</h5>
+        <h5 id='address-heading'>Zap Token Contract Address</h5>
         <p>(Copy to Clipboard)</p>
 
         <input id='copy-address' value='0x986F46A34b8adD47593074Acd804E2D622643D72' readonly>
@@ -71,9 +71,13 @@
         <p>
           The Zap Faucet is a developer tool running on the
           Ethereum Kovan Testnet to send 1 Test ZAP to users.
-        </p>
 
-        <p>If </p>
+          Use the Kovan Ether Faucet Link to get 1 Ether
+          before starting the transaction.
+
+          Copy the Zap Token Contract address and add it
+          to your MetaMask account.
+        </p>
       </div>
 
       <!-- Kovan Ether Faucet Div -->
@@ -96,8 +100,8 @@
       <h5 class='tx-h5'>To: <span id='to'></span></h5>
       <h5 class='tx-h5'>From: <span id='from'></span></h5>
       <h5 class='tx-h5'>Transaction Hash: <a href='' id='tx-href' target='_blank'>
-          <span id='tx-hash'></span>
-      </h5>
+          <span id='tx-hash'></span></h5>
+
     </div>
 
   </div>
@@ -142,7 +146,7 @@
   <script src="assets/javascript/abis/faucetAbi.js"></script>
 
   <!-- getOneZap.js -->
-  <script src="assets/javascript/getOneZap.js"></script>
+  <script src="assets/javascript/main.js"></script>
 
 </body>
 

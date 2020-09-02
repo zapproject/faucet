@@ -23,7 +23,7 @@ $(document).ready(() => {
         // Creates a new instance of the Faucet.sol smart contract by connecting web3
         // and passing the contracts ABI and Address as agruments
         let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
-        
+
         // Selects the functions used by the Faucet.sol smart contract
         faucetContract.methods
 
