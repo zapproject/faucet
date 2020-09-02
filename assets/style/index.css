@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+
+}
+
+.container-fluid {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images//solid-black.jpg') center center;
+  
+   
+}
+
+#copy-address {
+    width:400px;
+    border: solid 3px slategray;
+    border-radius:12px;
+}
+
+.bi-clipboard {
+    cursor:pointer;
+}
+
+
+.description-div {
+    margin-top:30px;
+}
+
+.hide {
+    margin-top:30px;
+    border: 5px solid slategray;
+    border-radius:16px;
+    width:960px;
+    width:auto;
+    display: none;
+   
+}
+
+.topbar {
+    background-color: whitesmoke !important;
+    border-bottom: solid 4px #0078FE;
+}
+
+img {
+    width:180px;
+
+}
+
+#zap-faucet-h4 {
+   margin:auto;
+}
+
+h4 {
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h5 {
+    color:#0078FE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+.tx-h5 {
+    color:#0078FE;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+nav a {
+    padding-right: 14px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+nav a:hover {
+    text-decoration: none;
+    color:#0078FE;
+}
+
+p {
+    color:whitesmoke;
+    font-weight: bold;
+}
+
+#address {
+    color:#0078FE;
+    font-weight: bold;    
+}
+
+#tx-href {
+    color:darkblue;
+}
+
+
+#faucet-link {
+    color:darkblue;
+}
+
+#to {
+    color:whitesmoke;
+}
+
+#from {
+    color:whitesmoke;
+}
+
+
