@@ -24,20 +24,9 @@ body {
 }
 
 
-#description-div {
-    margin-top:38px;
+.description-div {
+    margin-top:30px;
 }
-
-
-#faucet-link-div {
-    margin-top:50px;
-}
-
-
-#get-zap-div {
-    margin-top: 50px;
-}
-
 
 .hide {
     margin-top:30px;
@@ -45,10 +34,8 @@ body {
     border-radius:16px;
     width:960px;
     width:auto;
-    display:none;
    
 }
-
 
 .topbar {
     background-color: whitesmoke !important;

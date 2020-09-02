@@ -29,6 +29,7 @@
       <img src="./assets/images/zap-logo.png" class="d-inline-block align-top" alt="">
     </a>
 
+    <!-- Center h4 heading -->
     <h4 id='zap-faucet-h4'>Zap Kovan Faucet</h4>
 
     <!-- Topbar links Div -->
@@ -46,6 +47,14 @@
 
       <!-- Zap Token Address Div -->
       <div>
+
+        <!-- Creates enough space between the #address-heading h5
+          and the navbar without breaking the ripple effect.
+         -->
+        <br>
+        <br>
+        <br>
+
         <h5 id='address-heading'>Zap Token Contract Address</h5>
         <p>(Copy to Clipboard)</p>
 
@@ -66,22 +75,21 @@
       </div>
 
       <!-- Faucet Description Div -->
-      <div id='description-div'>
+      <div class='description-div'>
         <h5>Faucet Description</h5>
         <p>
-          The Zap Faucet is a developer tool running on the
-          Ethereum Kovan Testnet to send 1 Test ZAP to users.
-
-          Use the Kovan Ether Faucet Link to get 1 Ether
-          before starting the transaction.
-
-          Copy the Zap Token Contract address and add it
-          to your MetaMask account.
+          The Zap Faucet is a developer tool running on the Ethereum Kovan Testnet
+          able to send 1 Test ZAP to a users
+          MetaMask account. Use the Kovan Ether Faucet Link below to get
+          1 Ether before starting the transaction. Copy the Zap
+          Token Contract address above and add it to your MetaMask
+          account and start the transaction by clicking the Get
+          ZAP button.
         </p>
       </div>
 
       <!-- Kovan Ether Faucet Div -->
-      <div id='faucet-link-div'>
+      <div class='description-div'>
         <h5>Kovan Ether Faucet Link</h5>
         <a href='https://faucet.kovan.network/' target='_blank'>
           <p id='faucet-link'>https://faucet.kovan.network/</p>
@@ -89,7 +97,7 @@
       </div>
 
       <!-- Get Zap Div -->
-      <div id='get-zap-div'>
+      <div class='description-div'>
         <button type="button" class="btn btn-primary" id='get-zap'>Get ZAP</button>
       </div>
 
