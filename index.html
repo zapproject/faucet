@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,67 +6,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-  <!-- index.css -->
-  <link rel="stylesheet" href="./assets/style/index.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <!-- ripples.css -->
-  <link rel='stylesheet' href='./assets//style/ripple.css' />
+  <!-- index.css -->
+  <link rel="stylesheet" href="./assets/style/index.css">
 
+  <!-- Page title -->
   <title>Zap Faucet</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-light bg-light justify-content-between topbar">
-    <a href='https://zap.org/'>
-      <img src="./assets/images/logoDarkPNG.png" class="d-inline-block align-top" alt="" loading="lazy">
-    </a>
+  <div>
 
-    <h4>Zap Faucet</h4>
-
-    <div>
-      <a href="https://zap.org/">Home</a>
-      <a href="https://tech.zap.org/">Documentation</a>
-    </div>
-  </nav>
-
-  <div class="container-fluid">
-    <div class='text-center'>
-
-      <h5>Zap Token Contract Address</h5>
-      <p>
-        0x986F46A34b8adD47593074Acd804E2D622643D72
-      </p>
-
-      <h5>Faucet Description</h5>
-      <p>
-        Bacon ipsum dolor amet landjaeger porchetta ground round sausage strip
-        steak pork chop t-bone frankfurter bresaola alcatra.
-        Fatback porchetta shoulder, cupim shankle ground
-      </p>
-
-      <h5>Kovan Ether Faucet Link</h5>
-      <a href='https://faucet.kovan.network/' target='_blank'>
-        <p>https://faucet.kovan.network/</p>
+    <!-- Bootstrap Topbar -->
+    <nav class="navbar navbar-light bg-light justify-content-between topbar">
+      <a href='https://zap.org/'>
+        <img src="./assets/images/logoDarkPNG.png" class="d-inline-block align-top" alt="">
       </a>
 
-      <h5>Receive 1 Zap</h5>
-      <button type="button" class="btn btn-primary" id='get-zap'>Get Zap</button>
+      <h4 id='zap-faucet-h4'>Zap Faucet</h4>
+
+      <!-- Topbar links Div -->
+      <div>
+        <a href="https://zap.org/">Home</a>
+        <a href="https://tech.zap.org/">Documentation</a>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- Where the jQuery ripple effect renders to -->
+  <div class="container-fluid">
+
+    <!-- Center Content Div -->
+    <div class='text-center'>
+
+      <!-- Zap Token Address Div -->
+      <div>
+        <h5>Zap Token Contract Address</h5>
+        <p>
+          0x986F46A34b8adD47593074Acd804E2D622643D72
+        </p>
+      </div>
+
+      <!-- Faucet Description Div -->
+      <div id='description-div'>
+        <h5>Faucet Description</h5>
+        <p>
+          Some Text
+        </p>
+      </div>
+
+      <!-- Kovan Ether Faucet Div -->
+      <div id='faucet-link-div'>
+        <h5>Kovan Ether Faucet Link</h5>
+        <a href='https://faucet.kovan.network/' target='_blank'>
+          <p id='faucet-link'>https://faucet.kovan.network/</p>
+        </a>
+      </div>
+
+      <!-- Get Zap Div -->
+      <div id='get-zap-div'>
+        <button type="button" class="btn btn-primary" id='get-zap'>Get Zap</button>
+      </div>
+
     </div>
 
+    <!-- Get Zap info hidden until a successful transaction occurs -->
     <div class='container hide'>
-      <h5 class='tx-h5'>Test Zap sent to: <span id='to'></span></h5>
-      <h5 class='tx-h5'>Received test Zap from: <span id='from'></span></h5>
-      <h5 class='tx-h5'>Transaction hash: <a href='' id='tx-href'><span id='tx-hash'></span></h5>
+      <h5 class='tx-h5'>To: <span id='to'></span></h5>
+      <h5 class='tx-h5'>From: <span id='from'></span></h5>
+      <h5 class='tx-h5'>Transaction Hash: <a href='' id='tx-href' target='_blank'>
+          <span id='tx-hash'>0xeef10fc5170f669b86c4cd0444882a96087221325f8bf2f55d6188633aa7be7c</span>
+
+      </h5>
     </div>
 
   </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -79,6 +120,7 @@
   <!-- Web3 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
+  <!-- web-provider.js -->
   <script src='./assets/javascript/web3-provider.js'></script>
 
   <!-- ripples.js -->

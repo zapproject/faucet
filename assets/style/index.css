@@ -1,25 +1,41 @@
 body {
-    background-image:url('../images/stock-image.jpg');
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
 
 }
 
+/* Main div */
 .container-fluid {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../images/stock-image.jpg') center center;
-    background-size: cover;
+    background: url('../images//solid-black.jpg') center center;
+  
+   
+}
+
+/* Transaction info div */
+#description-div {
+    margin-top:38px;
+}
+
+/* Faucet link div  */
+#faucet-link-div {
+    margin-top:50px;
+}
+
+/* Get zap div */
+#get-zap-div {
+    margin-top: 50px;
 }
 
 /* Transaction information*/
 .hide {
     margin-top:30px;
-    background-color:#0078FE;
-    box-shadow: 10px 10px;
-    border: 5px solid white;
+    border: 5px solid slategray;
     border-radius:16px;
-    width:1000px;
+    width:960px;
+   
 }
 
 /* Bootstrap topbar */
@@ -34,34 +50,40 @@ img {
 
 }
 
-/* Zap kovan faucet h5 */
+/* Zap Faucet h4 */
+#zap-faucet-h4 {
+   margin:auto;
+}
+
+/* Zap kovan faucet h4 */
 h4 {
     margin:auto;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 
 }
 
 h5 {
     color:#0078FE;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold; 
-    margin-top:20px;
-   
+    font-weight: bold;
+
 }
 
+/* The h5 elements in the Get Zap Info Div */
 .tx-h5 {
-    color:black;
+    color:#0078FE;
+    font-weight: bold;
+    margin-top:20px;
 }
 
+/* Topbar links */
 nav a {
     padding-right: 14px;
     color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;    
+    font-family: Arial, Helvetica, sans-serif;  
 }
 
-
+/* Topbar links hover effects */
 nav a:hover {
     text-decoration: none;
     color:#0078FE;
@@ -69,30 +91,29 @@ nav a:hover {
 
 p {
     color:whitesmoke;
+    font-weight: bold;
 }
 
 #address {
     color:#0078FE;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;    
 }
 
 #tx-href {
-    color:black;
+    color:darkblue;
 }
 
-.main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+#faucet-link {
+    color:darkblue;
 }
 
-.receipt {
-    width: 100%;
+#to {
+    color:whitesmoke;
 }
 
-.receipt * {
-    /* background-color: #0c0c0c; */
-    border: none;
+#from {
+    color:whitesmoke;
 }
+
 
