@@ -17,29 +17,26 @@
   <link rel="stylesheet" href="./assets/style/index.css">
 
   <!-- Page title -->
-  <title>Zap Faucet</title>
+  <title>Zap Kovan Faucet</title>
 </head>
 
 <body>
 
-  <div>
 
-    <!-- Bootstrap Topbar -->
-    <nav class="navbar navbar-light bg-light justify-content-between topbar sticky-top">
-      <a href='https://zap.org/'>
-        <img src="./assets/images/zap-logo.png" class="d-inline-block align-top" alt="">
-      </a>
+  <!-- Bootstrap Topbar -->
+  <nav class="navbar navbar-light bg-light justify-content-between topbar sticky-top">
+    <a href='https://zap.org/'>
+      <img src="./assets/images/zap-logo.png" class="d-inline-block align-top" alt="">
+    </a>
 
-      <h4 id='zap-faucet-h4'>Zap Faucet</h4>
+    <h4 id='zap-faucet-h4'>Zap Kovan Faucet</h4>
 
-      <!-- Topbar links Div -->
-      <div>
-        <a href="https://zap.org/">Home</a>
-        <a href="https://tech.zap.org/">Documentation</a>
-      </div>
-    </nav>
-
-  </div>
+    <!-- Topbar links Div -->
+    <div>
+      <a href="https://zap.org/">Home</a>
+      <a href="https://tech.zap.org/">Documentation</a>
+    </div>
+  </nav>
 
   <!-- Where the jQuery ripple effect renders to -->
   <div class="container-fluid">
@@ -51,7 +48,7 @@
       <div>
         <h5>Zap Token Contract Address</h5>
         <p>(Copy to Clipboard)</p>
-        
+
         <input id='copy-address' value='0x986F46A34b8adD47593074Acd804E2D622643D72' readonly>
 
         <!-- Clipboard icon -->
@@ -66,15 +63,17 @@
             5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 
             2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
         </svg>
-
       </div>
 
       <!-- Faucet Description Div -->
       <div id='description-div'>
         <h5>Faucet Description</h5>
         <p>
-          Some Text
+          The Zap Faucet is a developer tool running on the
+          Ethereum Kovan Testnet to send 1 Test ZAP to users.
         </p>
+
+        <p>If </p>
       </div>
 
       <!-- Kovan Ether Faucet Div -->
@@ -87,7 +86,7 @@
 
       <!-- Get Zap Div -->
       <div id='get-zap-div'>
-        <button type="button" class="btn btn-primary" id='get-zap'>Get Zap</button>
+        <button type="button" class="btn btn-primary" id='get-zap'>Get ZAP</button>
       </div>
 
     </div>
@@ -97,8 +96,7 @@
       <h5 class='tx-h5'>To: <span id='to'></span></h5>
       <h5 class='tx-h5'>From: <span id='from'></span></h5>
       <h5 class='tx-h5'>Transaction Hash: <a href='' id='tx-href' target='_blank'>
-          <span id='tx-hash'>0xeef10fc5170f669b86c4cd0444882a96087221325f8bf2f55d6188633aa7be7c</span>
-
+          <span id='tx-hash'></span>
       </h5>
     </div>
 
@@ -134,7 +132,6 @@
   <!-- Web3 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
-
   <!-- web-provider.js -->
   <script src='./assets/javascript/web3-provider.js'></script>
 
@@ -146,9 +143,6 @@
 
   <!-- getOneZap.js -->
   <script src="assets/javascript/getOneZap.js"></script>
-
-
-
 
 </body>
 

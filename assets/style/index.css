@@ -4,7 +4,7 @@ body {
 
 }
 
-/* Main div */
+
 .container-fluid {
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ body {
 
 #copy-address {
     width:400px;
-    border: solid 4px slategray;
+    border: solid 3px slategray;
     border-radius:12px;
 }
 
@@ -25,49 +25,46 @@ body {
 }
 
 
-/* Transaction info div */
 #description-div {
     margin-top:38px;
 }
 
-/* Faucet link div  */
+
 #faucet-link-div {
     margin-top:50px;
 }
 
-/* Get zap div */
+
 #get-zap-div {
     margin-top: 50px;
 }
 
-/* Transaction information*/
+
 .hide {
     margin-top:30px;
     border: 5px solid slategray;
     border-radius:16px;
     width:960px;
     width:auto;
+    display:none;
    
 }
 
-/* Bootstrap topbar */
+
 .topbar {
     background-color: whitesmoke !important;
     border-bottom: solid 4px #0078FE;
 }
 
-/* Zap topbar logo*/
 img {
     width:180px;
 
 }
 
-/* Zap Faucet h4 */
 #zap-faucet-h4 {
    margin:auto;
 }
 
-/* Zap kovan faucet h4 */
 h4 {
     margin:auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -81,21 +78,18 @@ h5 {
 
 }
 
-/* The h5 elements in the Get Zap Info Div */
 .tx-h5 {
     color:#0078FE;
     font-weight: bold;
     margin-top:20px;
 }
 
-/* Topbar links */
 nav a {
     padding-right: 14px;
     color:black;
     font-family: Arial, Helvetica, sans-serif;  
 }
 
-/* Topbar links hover effects */
 nav a:hover {
     text-decoration: none;
     color:#0078FE;
