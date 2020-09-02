@@ -37,14 +37,14 @@ $(document).ready(() => {
             // Successful promise
             .then((res) => {
 
-                // Appends the receiving address string to the (#to) id 
-                $('#to').append(res.from);
+                // Sets the html from the receiving address string to the (#to) id 
+                $('#to').html(res.from);
 
-                // Appends the sending contract address string to the(#from) id
-                $('#from').append(res.to);
+                // Sets the html from sending contract address string to the(#from) id
+                $('#from').html(res.to);
 
-                // Appends the Etherscan transaction string to the (#tx-hash) id
-                $('#tx-hash').append(res.transactionHash)
+                // Sets the html from the Etherscan transaction string to the (#tx-hash) id
+                $('#tx-hash').html(res.transactionHash)
 
                 // Sets the href path to the transaction page on Etherscan by concatenating
                 // res.transactionHash
