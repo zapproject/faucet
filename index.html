@@ -25,9 +25,9 @@
   <div>
 
     <!-- Bootstrap Topbar -->
-    <nav class="navbar navbar-light bg-light justify-content-between topbar">
+    <nav class="navbar navbar-light bg-light justify-content-between topbar sticky-top">
       <a href='https://zap.org/'>
-        <img src="./assets/images/logoDarkPNG.png" class="d-inline-block align-top" alt="">
+        <img src="./assets/images/zap-logo.png" class="d-inline-block align-top" alt="">
       </a>
 
       <h4 id='zap-faucet-h4'>Zap Faucet</h4>
@@ -50,9 +50,23 @@
       <!-- Zap Token Address Div -->
       <div>
         <h5>Zap Token Contract Address</h5>
-        <p>
-          0x986F46A34b8adD47593074Acd804E2D622643D72
-        </p>
+        <p>(Copy to Clipboard)</p>
+        
+        <input id='copy-address' value='0x986F46A34b8adD47593074Acd804E2D622643D72' readonly>
+
+        <!-- Clipboard icon -->
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="whitesmoke"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 
+            2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 
+            1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+
+          <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 
+            .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 
+            5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 
+            2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+        </svg>
+
       </div>
 
       <!-- Faucet Description Div -->
@@ -120,6 +134,7 @@
   <!-- Web3 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
+
   <!-- web-provider.js -->
   <script src='./assets/javascript/web3-provider.js'></script>
 
@@ -131,6 +146,9 @@
 
   <!-- getOneZap.js -->
   <script src="assets/javascript/getOneZap.js"></script>
+
+
+
 
 </body>
 

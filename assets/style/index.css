@@ -14,6 +14,17 @@ body {
    
 }
 
+#copy-address {
+    width:400px;
+    border: solid 4px slategray;
+    border-radius:12px;
+}
+
+.bi-clipboard {
+    cursor:pointer;
+}
+
+
 /* Transaction info div */
 #description-div {
     margin-top:38px;
@@ -35,6 +46,7 @@ body {
     border: 5px solid slategray;
     border-radius:16px;
     width:960px;
+    width:auto;
    
 }
 
