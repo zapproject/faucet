@@ -14,7 +14,7 @@ $(document).ready(() => {
     });
 
 
-    // On click of the get-zap button this function starts the transaction to send users 1 ZAP
+    // On click of the get-zap button this function starts the transaction to send users 1000 ZAP
     $('#get-zap').click(async () => {
 
         // Gets the users account address
@@ -25,9 +25,10 @@ $(document).ready(() => {
         let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
 
         // Converts the wei amount to a BigNumber
+        // 1000000000000000000 wei = 1000 ZAP
         let value = web3.utils.toBN(1000000000000000000);
 
-        // Selects the functions used by the Faucet.sol smart contract
+        // Selects the buyZap function
         faucetContract.methods.buyZap(accounts[0], value
 
         ).send({ from: accounts[0], value: 1000000000000000 })
