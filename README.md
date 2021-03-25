@@ -22,7 +22,7 @@ Step 8. After clicking the Get ZAP button MetaMask will open and display the cos
 
 Step 9. A successful transaction will display the MetaMask Confirmed Transaction message at the bottom right of the screen and the transaction details consisting of the To address, From address, and a Etherscan Transaction Hash will display at the bottom of the browser.
 
-Step 10. Open your MetaMask  and 1 ZAP will be in your account.
+Step 10. Open your MetaMask and 1000 ZAP will be in your account.
 
 
 
