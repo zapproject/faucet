@@ -91,4 +91,4 @@ const faucetAbi = [
 		"type": "event"
 	}
 ]
-const faucetAddress = "0x534361FCfAb1b636469E3c53a34764D4a352C8d3";
+const faucetAddress = "0xd688b0815fD9E1b6fFe330cB8C1b30bA56762f55";
