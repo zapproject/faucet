@@ -24,15 +24,13 @@ $(document).ready(() => {
         // and passing the contracts ABI and Address as agruments
         let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
 
+        // Converts the wei amount to a BigNumber
+        let value = web3.utils.toBN(1000000000000000000);
+
         // Selects the functions used by the Faucet.sol smart contract
-        faucetContract.methods
+        faucetContract.methods.buyZap(accounts[0], value
 
-            // Function invoked from the Faucet.sol smart contract
-            .buyZap()
-
-            // The from property specifies the address invoking the function
-            // The value property is measured in wei then converted to ETH then ZAP
-            .send({ from: accounts[0], value: 1000000000000000 })
+        ).send({ from: accounts[0], value: 1000000000000000 })
 
             // Successful promise
             .then((res) => {
