@@ -2,42 +2,10 @@ const faucetAbi = [
 	{
 		"constant": false,
 		"inputs": [],
-		"name": "withdrawTok",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "rate",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
 		"name": "withdrawEther",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "buyZap",
-		"outputs": [],
-		"payable": true,
-		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -52,6 +20,24 @@ const faucetAbi = [
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"name": "amt",
+				"type": "uint256"
+			}
+		],
+		"name": "buyZap",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -104,6 +90,5 @@ const faucetAbi = [
 		"name": "Log",
 		"type": "event"
 	}
-];
-
-const faucetAddress = "0xE4304d24F352349CC4dA0ecDEa7FFa1924959B93";
+]
+const faucetAddress = "0xd688b0815fD9E1b6fFe330cB8C1b30bA56762f55";
