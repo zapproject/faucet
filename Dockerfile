@@ -1,7 +1,13 @@
-FROM nginx:alpine
+FROM node:erbium-alpine
 
 
-COPY ./ assets/usr/share/nginx/html
+RUN npm install -g serve
 
 
-COPY . /usr/share/nginx/html
+COPY ./ .
+
+
+COPY . .
+
+CMD ["serve"]
+
