@@ -2,7 +2,7 @@ name: Upload and Deploy to AWS
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ] 
 
 
 jobs:
