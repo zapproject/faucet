@@ -117,13 +117,20 @@ $(document).ready(() => {
                     $('#tx-href').attr('href',
                         'https://testnet.bscscan.com/tx/' + res.transactionHash);
 
+                    $('.spinner-border').hide();
+
                     // Successful transaction shows the .hide div
                     $('.hide').show();
 
                 })
                 .catch((err) => {
-                    console.log(err)
+
+                    $('.spinner-border').hide();
+
+                    return err;
+
                 })
+
             // If the network id does not equal 42(Kovan) or 97(BSC)
         } else {
 
