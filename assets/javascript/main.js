@@ -1,9 +1,9 @@
 $(document).ready(() => {
 
-    // Copies the token address when the clipboard icon is clicked
+    // Copies the kovan token address when the clipboard icon is clicked
     $('#kovan-clipboard').click(async () => {
 
-        // Stores the id copy-address
+        // Stores the id copy-kovan-address
         const copyAddress = $('#copy-kovan-address');
 
         // Selects the value to be copied
@@ -13,10 +13,10 @@ $(document).ready(() => {
         document.execCommand('copy');
     });
 
-    // Copies the token address when the clipboard icon is clicked
+    // Copies the BSC token address when the clipboard icon is clicked
     $('#bsc-clipboard').click(async () => {
 
-        // Stores the id copy-address
+        // Stores the id copy-bsc-address
         const copyAddress = $('#copy-bsc-address');
 
         // Selects the value to be copied
@@ -27,19 +27,21 @@ $(document).ready(() => {
     });
 
     // On click of the get-zap button this function starts the transaction to send users 1000 ZAP
+    // on the Kovan Testnet
     $('#get-zap').click(async () => {
 
         $('.hide').hide();
 
+        // Detects the network a users MetaMask is on
         const networkId = await web3.eth.net.getId();
 
         // Gets the users account address
         let accounts = await web3.eth.getAccounts();
 
-        // Creates a new instance of the Faucet.sol smart contract by connecting web3
-        // and passing the contracts ABI and Address as agruments
-        let faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
+        // Instance of the Kovan Faucet
+        let kovanFaucet = await new web3.eth.Contract(faucetAbi, kovanFaucetAddress);
 
+        // Instance of the BSC Faucet
         let bscFaucet = await new web3.eth.Contract(faucetAbi, bscFaucetAddress);
 
         // Converts the wei amount to a BigNumber
@@ -49,7 +51,7 @@ $(document).ready(() => {
         if (networkId === 42) {
 
             // Selects the buyZap function
-            faucetContract.methods.buyZap(accounts[0], value
+            kovanFaucet.methods.buyZap(accounts[0], value
 
             ).send({ from: accounts[0], value: 1000000000000000 })
 

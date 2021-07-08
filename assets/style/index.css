@@ -98,7 +98,11 @@ p {
 }
 
 #tx-href {
-    color:darkblue;
+    color:whitesmoke;
+}
+
+#tx-href:hover {
+    color:#0078FE
 }
 
 
