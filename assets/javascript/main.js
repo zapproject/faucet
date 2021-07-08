@@ -1,10 +1,23 @@
 $(document).ready(() => {
 
     // Copies the token address when the clipboard icon is clicked
-    $('.bi-clipboard').click(async () => {
+    $('#kovan-clipboard').click(async () => {
 
         // Stores the id copy-address
-        const copyAddress = $('#copy-address');
+        const copyAddress = $('#copy-kovan-address');
+
+        // Selects the value to be copied
+        copyAddress.select();
+
+        // Copies the value 
+        document.execCommand('copy');
+    });
+
+    // Copies the token address when the clipboard icon is clicked
+    $('#bsc-clipboard').click(async () => {
+
+        // Stores the id copy-address
+        const copyAddress = $('#copy-bsc-address');
 
         // Selects the value to be copied
         copyAddress.select();

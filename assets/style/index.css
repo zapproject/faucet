@@ -14,7 +14,7 @@ body {
   
 }
 
-#copy-address {
+.copy-address {
     width:400px;
     border: solid 3px slategray;
     border-radius:12px;
@@ -27,6 +27,10 @@ body {
 
 .description-div {
     margin-top:30px;
+}
+
+#bsc-address-heading {
+    margin-top:14px;
 }
 
 .hide {
