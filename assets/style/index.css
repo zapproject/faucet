@@ -103,7 +103,11 @@ p {
 
 
 #faucet-link {
-    color:darkblue;
+    color:whitesmoke;
+}
+
+#faucet-link:hover {
+    color:#0078FE
 }
 
 #to {
