@@ -68,7 +68,9 @@ $(document).ready(() => {
 
         } else if (networkId === 97) {
 
-            bscFaucet.methods.buyZap(accounts[0], web3.utils.toBN(500000000000000000000))
+            let tokenAmount = web3.utils.toBN(500000000000000000000)
+
+            bscFaucet.methods.buyZap(accounts[0], tokenAmount)
 
                 .send({ from: accounts[0], value: 1000000000000000 })
 
