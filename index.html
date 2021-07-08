@@ -119,18 +119,24 @@
 
     </div>
 
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+  
     <!-- Get Zap info hidden until a successful transaction occurs -->
     <div class='container hide'>
       <h5 class='tx-h5'>To: <span id='to'></span></h5>
-      <h5 class='tx-h5'>From: <span id='from'></span></h5>
+
+        <h5 class='tx-h5'>From: <span id='from'></span></h5>
+        
       <h5 class='tx-h5'>Transaction Hash: <a href='' id='tx-href' target='_blank'>
-          <span id='tx-hash'></span></h5>
+          <span id='tx-hash'></span>
+      </h5>
 
     </div>
 
   </div>
-
-
+  
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

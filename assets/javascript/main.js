@@ -32,6 +32,8 @@ $(document).ready(() => {
 
         $('.hide').hide();
 
+        $('.spinner-border').show();
+
         // Detects the network a users MetaMask is on
         const networkId = await web3.eth.net.getId();
 
@@ -73,13 +75,19 @@ $(document).ready(() => {
                     $('#tx-href').attr('href',
                         'https://kovan.etherscan.io/tx/' + res.transactionHash);
 
+                    $('.spinner-border').hide();
+
                     // Successful transaction shows the .hide div
                     $('.hide').show();
                 })
 
                 // Failed promise
                 .catch(function (error) {
-                    console.log(error);
+
+                    $('.spinner-border').hide();
+
+                    return error;
+
                 });
 
             // Checks if the network id is 97(BSC)

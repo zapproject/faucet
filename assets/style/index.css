@@ -43,6 +43,12 @@ body {
    
 }
 
+.spinner-border {
+    display: none;
+    margin:auto;
+    margin-top:6%;
+}
+
 .topbar {
     background-color: whitesmoke !important;
     border-bottom: solid 4px #0078FE;
