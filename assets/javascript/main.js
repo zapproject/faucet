@@ -48,6 +48,7 @@ $(document).ready(() => {
         // 1000000000000000000 wei = 1000 ZAP
         let value = web3.utils.toBN(1000000000000000000);
 
+        // Checks if the network id is equal to 42(Kovan)
         if (networkId === 42) {
 
             // Selects the buyZap function
@@ -81,8 +82,11 @@ $(document).ready(() => {
                     console.log(error);
                 });
 
+            // Checks if the network id is 97(BSC)
         } else if (networkId === 97) {
 
+            // Converts the wei amount to a BigNumber
+            // 500000000000000000000 wei = 500k ZAP
             let tokenAmount = web3.utils.toBN(500000000000000000000)
 
             bscFaucet.methods.buyZap(accounts[0], tokenAmount)
@@ -97,10 +101,10 @@ $(document).ready(() => {
                     // Sets the html from sending contract address string to the(#from) id
                     $('#from').html(res.to);
 
-                    // Sets the html from the Etherscan transaction string to the (#tx-hash) id
+                    // Sets the html from the BSC Scan transaction string to the (#tx-hash) id
                     $('#tx-hash').html(res.transactionHash)
 
-                    // Sets the href path to the transaction page on Etherscan by concatenating
+                    // Sets the href path to the transaction page on BSC Scan by concatenating
                     // res.transactionHash
                     $('#tx-href').attr('href',
                         'https://testnet.bscscan.com/tx/' + res.transactionHash);
@@ -108,12 +112,11 @@ $(document).ready(() => {
                     // Successful transaction shows the .hide div
                     $('.hide').show();
 
-
                 })
                 .catch((err) => {
                     console.log(err)
                 })
-
+            // If the network id does not equal 42(Kovan) or 97(BSC)
         } else {
 
             alert(
