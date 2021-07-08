@@ -13,9 +13,10 @@ $(document).ready(() => {
         document.execCommand('copy');
     });
 
-
     // On click of the get-zap button this function starts the transaction to send users 1000 ZAP
     $('#get-zap').click(async () => {
+
+        $('.hide').hide();
 
         const networkId = await web3.eth.net.getId();
 
@@ -67,7 +68,7 @@ $(document).ready(() => {
 
         } else if (networkId === 97) {
 
-            bscFaucet.methods.buyZap(accounts[0], value)
+            bscFaucet.methods.buyZap(accounts[0], web3.utils.toBN(500000000000000000000))
 
                 .send({ from: accounts[0], value: 1000000000000000 })
 
