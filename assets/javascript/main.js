@@ -67,23 +67,43 @@ $(document).ready(() => {
 
         } else if (networkId === 97) {
 
-            alert("ON BSC TESTNET")
-
             bscFaucet.methods.buyZap(accounts[0], value)
 
                 .send({ from: accounts[0], value: 1000000000000000 })
 
                 .then((res) => {
-                    console.log(res)
+
+                    // Sets the html from the receiving address string to the (#to) id 
+                    $('#to').html(res.from);
+
+                    // Sets the html from sending contract address string to the(#from) id
+                    $('#from').html(res.to);
+
+                    // Sets the html from the Etherscan transaction string to the (#tx-hash) id
+                    $('#tx-hash').html(res.transactionHash)
+
+                    // Sets the href path to the transaction page on Etherscan by concatenating
+                    // res.transactionHash
+                    $('#tx-href').attr('href',
+                        'https://testnet.bscscan.com/tx/' + res.transactionHash);
+
+                    // Successful transaction shows the .hide div
+                    $('.hide').show();
+
+
                 })
                 .catch((err) => {
                     console.log(err)
                 })
 
-
         } else {
 
-            alert("NOT ON KOVAN OR BSC TESTNET ")
+            alert(
+                "Network Id: " + networkId + " is not supported. " +
+                "Please switch to Kovan Testnet(42) or BSC Testnet(97)"
+            );
+
+            location.reload()
         }
     });
 
