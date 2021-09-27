@@ -90,7 +90,7 @@ const faucetAbi = [
 		"name": "Log",
 		"type": "event"
 	}
-]
+];
 
 const kovanFaucetAddress = "0x2B11500AAaC546f48e40221FAD8Db28E734e5f76";
 
