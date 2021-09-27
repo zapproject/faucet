@@ -131,6 +131,10 @@ $(document).ready(() => {
 
                 })
 
+        } else if (networkId === 4) {
+
+            alert("Network Id: " + networkId)
+
             // If the network id does not equal 42(Kovan) or 97(BSC)
         } else {
 
