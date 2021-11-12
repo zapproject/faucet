@@ -13,6 +13,20 @@ $(document).ready(() => {
         document.execCommand('copy');
     });
 
+    // Copies the kovan token address when the clipboard icon is clicked
+    $('#rinkeby-clipboard').click(async () => {
+
+        // Stores the id copy-kovan-address
+        const copyAddress = $('#copy-rinkeby-address');
+
+        // Selects the value to be copied
+        copyAddress.select();
+
+        // Copies the value 
+        document.execCommand('copy');
+    });
+
+
     // Copies the BSC token address when the clipboard icon is clicked
     $('#bsc-clipboard').click(async () => {
 
@@ -45,6 +59,8 @@ $(document).ready(() => {
 
         // Instance of the BSC Faucet
         let bscFaucet = await new web3.eth.Contract(faucetAbi, bscFaucetAddress);
+
+        let rinkebyFaucet = await new web3.eth.Contract(faucetAbi, rinkebyFaucetAddress);
 
         // Converts the wei amount to a BigNumber
         // 1000000000000000000 wei = 1000 ZAP
@@ -130,6 +146,45 @@ $(document).ready(() => {
                     return err;
 
                 })
+
+        } else if (networkId === 4) {
+
+            // Selects the buyZap function
+            rinkebyFaucet.methods.buyZap(accounts[0], value
+
+            ).send({ from: accounts[0], value: 1000000000000000 })
+
+                // Successful promise
+                .then((res) => {
+
+                    // Sets the html from the receiving address string to the (#to) id 
+                    $('#to').html(res.from);
+
+                    // Sets the html from sending contract address string to the(#from) id
+                    $('#from').html(res.to);
+
+                    // Sets the html from the Etherscan transaction string to the (#tx-hash) id
+                    $('#tx-hash').html(res.transactionHash)
+
+                    // Sets the href path to the transaction page on Etherscan by concatenating
+                    // res.transactionHash
+                    $('#tx-href').attr('href',
+                        'https://rinkeby.etherscan.io/tx/' + res.transactionHash);
+
+                    $('.spinner-border').hide();
+
+                    // Successful transaction shows the .hide div
+                    $('.hide').show();
+                })
+
+                // Failed promise
+                .catch(function (error) {
+
+                    $('.spinner-border').hide();
+
+                    return error;
+
+                });
 
             // If the network id does not equal 42(Kovan) or 97(BSC)
         } else {
