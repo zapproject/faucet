@@ -13,6 +13,20 @@ $(document).ready(() => {
         document.execCommand('copy');
     });
 
+    // Copies the kovan token address when the clipboard icon is clicked
+    $('#rinkeby-clipboard').click(async () => {
+
+        // Stores the id copy-kovan-address
+        const copyAddress = $('#copy-rinkeby-address');
+
+        // Selects the value to be copied
+        copyAddress.select();
+
+        // Copies the value 
+        document.execCommand('copy');
+    });
+
+
     // Copies the BSC token address when the clipboard icon is clicked
     $('#bsc-clipboard').click(async () => {
 
